@@ -146,15 +146,15 @@ namespace Google.XR.Cardboard
             RectInt closeRect = Widget.CloseButtonRenderRect;
             RectInt gearRect = Widget.GearButtonRenderRect;
             RectInt alignmentRect = Widget.AlignmentRect;
-            CardboardUnity_setWidgetCount(3);
+            CardboardUnity_setWidgetCount(2);
             CardboardUnity_setWidgetParams(
                     0, _closeTexture.GetNativeTexturePtr(), closeRect.x, closeRect.y,
                     closeRect.width, closeRect.height);
+//            CardboardUnity_setWidgetParams(
+//                   1, _gearTexture.GetNativeTexturePtr(), gearRect.x, gearRect.y, gearRect.width,
+//                    gearRect.height);
             CardboardUnity_setWidgetParams(
-                    1, _gearTexture.GetNativeTexturePtr(), gearRect.x, gearRect.y, gearRect.width,
-                    gearRect.height);
-            CardboardUnity_setWidgetParams(
-                    2, Texture2D.whiteTexture.GetNativeTexturePtr(), alignmentRect.x,
+                    1, Texture2D.whiteTexture.GetNativeTexturePtr(), alignmentRect.x,
                     alignmentRect.y, alignmentRect.width, alignmentRect.height);
         }
 
