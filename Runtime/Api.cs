@@ -58,15 +58,17 @@ namespace Google.XR.Cardboard
         {
             get
             {
-                if (!XRLoader._isStarted || Input.touchCount == 0)
-                {
-                    return false;
-                }
+                return false;
 
-                Touch touch = Input.GetTouch(0);
-                Vector2Int touchPosition = Vector2Int.RoundToInt(touch.position);
-                return touch.phase == TouchPhase.Began
-                    && Widget.GearButtonRect.Contains(touchPosition);
+                // if (!XRLoader._isStarted || Input.touchCount == 0)
+                // {
+                //     return false;
+                // }
+
+                // Touch touch = Input.GetTouch(0);
+                // Vector2Int touchPosition = Vector2Int.RoundToInt(touch.position);
+                // return touch.phase == TouchPhase.Began
+                //     && Widget.GearButtonRect.Contains(touchPosition);
             }
         }
 
